@@ -5,7 +5,8 @@ import json
 import os
 
 app = Flask(__name__)
-CORS(app)  # ✅ This enables CORS for all origins
+CORS(app, origins=["https://bookmkttool.vercel.app"])
+
 
 # Subreddit member counts
 subreddit_info = {
