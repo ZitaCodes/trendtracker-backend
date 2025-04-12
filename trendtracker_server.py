@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
 import json
+import os
 
 app = Flask(__name__)
 
@@ -19,6 +20,18 @@ def home():
 
 @app.route('/tropes')
 def get_tropes():
+    # 🔐 Safe check if file doesn't exist
+    if not os.path.exists('trendtracker_output.json'):
+        return jsonify({
+            "timestamp": None,
+            "tropes": [],
+            "insight": {
+                "trope": None,
+                "blurb": "TrendTracker data not yet generated. Please run the scraper."
+            }
+        })
+
+    # ✅ File exists — read it normally
     with open('trendtracker_output.json', 'r') as f:
         data = json.load(f)
 
@@ -26,8 +39,7 @@ def get_tropes():
     insight = {}
 
     if top_trope:
-        # For this MVP version, just simulate presence across 3 subs
-        subs_discussing = 3  # replace this later with actual detection
+        subs_discussing = 3  # Placeholder
         member_sum = sum(list(subreddit_info.values())[:subs_discussing])
 
         insight = {
