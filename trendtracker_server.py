@@ -1,8 +1,11 @@
 from flask import Flask, jsonify
+from flask_cors import CORS  # ✅ Add this line
+
 import json
 import os
 
 app = Flask(__name__)
+CORS(app)  # ✅ This enables CORS for all origins
 
 # Subreddit member counts
 subreddit_info = {
