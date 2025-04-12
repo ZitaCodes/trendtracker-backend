@@ -6,13 +6,13 @@ import os
 from dotenv import load_dotenv
 import json
 
-# Load Reddit credentials
-load_dotenv()
+# Direct credentials — skip .env
 reddit = praw.Reddit(
-    client_id=os.getenv("REDDIT_CLIENT_ID"),
-    client_secret=os.getenv("REDDIT_CLIENT_SECRET"),
-    user_agent=os.getenv("REDDIT_USER_AGENT")
+    client_id="mlq9yaxlmw3pdZO7OB3YQg",
+    client_secret="FyzJIljKl43hMBWDZ0OEdFPLW7074Q",
+    user_agent="TrendTrackerBot/0.1"
 )
+
 
 # Config
 subreddits = [
