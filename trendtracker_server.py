@@ -56,21 +56,25 @@ def get_tropes():
         "tropes": data["tropes"],
         "insight": insight
     })
-    # Step 3: Auto-commit to GitHub
-   try:
-        subprocess.run(["git", "config", "--global", "user.name", "RenderBot"])
-        subprocess.run(["git", "config", "--global", "user.email", "render@bot.com"])
-        
-       # Only add remote if it doesn't already exist
-        subprocess.run(["git", "remote", "get-url", "origin"], check=False)
+    
+# Step 3: Auto–commit to GitHub
+try:
+    subprocess.run(["git", "config", "--global", "user.name", "RenderBot"])
+    subprocess.run(["git", "config", "--global", "user.email", "render@bot.com"])
+
+    # Only add remote if it doesn't already exist
+    subprocess.run(["git", "remote", "get-url", "origin"], check=False)
+
     if not os.path.exists(".git"):  # repo not initialized yet
         subprocess.run(["git", "init"])
         subprocess.run(["git", "remote", "add", "origin", "git@github.com:ZitaCodes/trendtracker-backend.git"])
-        subprocess.run(["git", "add", "trendtracker_output.json"])
-        subprocess.run(["git", "commit", "-m", "Auto-update trendtracker_output.json"])
-        subprocess.run(["git", "push", "origin", "main"])
-    except Exception as e:
-         print("🚫 Git push failed:", e)
+
+    subprocess.run(["git", "add", "trendtracker_output.json"])
+    subprocess.run(["git", "commit", "-m", "Auto-update trendtracker_output.json"])
+    subprocess.run(["git", "push", "origin", "main"])
+
+except Exception as e:
+    print("❌ Git push failed:", e)
 
 
 if __name__ == '__main__':
