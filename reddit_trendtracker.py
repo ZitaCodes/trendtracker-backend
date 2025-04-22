@@ -3,6 +3,7 @@ from datetime import datetime, timedelta
 from collections import Counter
 import re
 import os
+import subprocess
 from dotenv import load_dotenv
 import json
 
@@ -72,3 +73,11 @@ with open("trendtracker_output.json", "w") as f:
     json.dump(trend_data, f, indent=2)
 
 print("✅ TrendTracker data written to trendtracker_output.json")
+
+# Local Git commit (optional - no push)
+try:
+    subprocess.run(["git", "add", "trendtracker_output.json"], check=True)
+    subprocess.run(["git", "commit", "-m", "Auto-update trendtracker_output.json"], check=True)
+    print("✅ JSON file committed locally.")
+except subprocess.CalledProcessError as e:
+    print("⚠️ Git commit failed:", e)
