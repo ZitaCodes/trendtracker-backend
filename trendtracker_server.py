@@ -55,22 +55,29 @@ def get_tropes():
         "timestamp": data["timestamp"],
         "tropes": data["tropes"],
         "insight": insight
-    })
+    })                            
     
-# Step 3: Auto–commit to GitHub
+
 try:
+    # Set Git user
     subprocess.run(["git", "config", "--global", "user.name", "RenderBot"])
     subprocess.run(["git", "config", "--global", "user.email", "render@bot.com"])
 
-    # Only add remote if it doesn't already exist
-    subprocess.run(["git", "remote", "get-url", "origin"], check=False)
-
-    if not os.path.exists(".git"):  # repo not initialized yet
+    # Init Git repo if not already
+    if not os.path.exists(".git"):
         subprocess.run(["git", "init"])
-        subprocess.run(["git", "remote", "add", "origin", "git@github.com:ZitaCodes/trendtracker-backend.git"])
+        subprocess.run([
+            "git", "remote", "add", "origin",
+            "git@github.com:ZitaCodes/trendtracker-backend.git"  # 👈 update per repo
+        ])
+    else:
+        subprocess.run(["git", "remote", "set-url", "origin",
+            "git@github.com:ZitaCodes/trendtracker-backend.git"  # 👈 update per repo
+        ])
 
-    subprocess.run(["git", "add", "trendtracker_output.json"])
-    subprocess.run(["git", "commit", "-m", "Auto-update trendtracker_output.json"])
+    # Add, commit, push
+    subprocess.run(["git", "add", "yourfile.json"])  # 👈 update for personas, reddit, etc.
+    subprocess.run(["git", "commit", "-m", "Auto-update via Render"])
     subprocess.run(["git", "push", "origin", "main"])
 
 except Exception as e:
