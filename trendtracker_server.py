@@ -2,8 +2,9 @@ from flask import Flask, jsonify
 from flask_cors import CORS  # ✅ Add this line
 
 import json
-import os
 import subprocess
+import os
+
 
 app = Flask(__name__)
 CORS(app, origins=["https://bookmkttool.vercel.app"])
@@ -59,30 +60,23 @@ def get_tropes():
     })                            
     
 
-try:
-    # Set Git user
-    subprocess.run(["git", "config", "--global", "user.name", "RenderBot"])
-    subprocess.run(["git", "config", "--global", "user.email", "render@bot.com"])
-
-    # Init Git repo if not already
-    if not os.path.exists(".git"):
-        subprocess.run(["git", "init"])
-        subprocess.run([
-            "git", "remote", "add", "origin",
-            "git@github.com:ZitaCodes/trendtracker-backend.git"  # 👈 update per repo
-        ])
-    else:
-        subprocess.run(["git", "remote", "set-url", "origin",
-            "git@github.com:ZitaCodes/trendtracker-backend.git"  # 👈 update per repo
-        ])
-
-    # Add, commit, push
-    subprocess.run(["git", "add", "trendtracker_output.json"])  # 👈 update for personas, reddit, etc.
-    subprocess.run(["git", "commit", "-m", "Auto-update via Render"])
-    subprocess.run(["git", "push", "origin", "main"])
-
-except Exception as e:
-    print("❌ Git push failed:", e)
+# Optional: Only run push logic if inside Render
+if os.getenv("RENDER"):
+    try:
+        subprocess.run(["git", "config", "--global", "user.name", "RenderBot"])
+        subprocess.run(["git", "config", "--global", "user.email", "render@bot.com"])
+        
+        # Initialize repo if needed
+        if not os.path.exists(".git"):
+            subprocess.run(["git", "init"])
+            subprocess.run(["git", "remote", "add", "origin", "git@github.com:ZitaCodes/trendtracker-backend.git"])
+        
+        subprocess.run(["git", "add", "trendtracker_output.json"])
+        subprocess.run(["git", "commit", "-m", "Auto-update trendtracker_output.json"])
+        subprocess.run(["git", "push", "origin", "main"])
+    
+    except Exception as e:
+        print("❌ Git push failed:", e)
 
 
 if __name__ == '__main__':
