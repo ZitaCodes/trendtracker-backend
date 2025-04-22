@@ -75,9 +75,29 @@ with open("trendtracker_output.json", "w") as f:
 print("✅ TrendTracker data written to trendtracker_output.json")
 
 # Local Git commit (optional - no push)
+print("🔁 Starting auto-commit and push to GitHub...")
+
 try:
-    subprocess.run(["git", "add", "trendtracker_output.json"], check=True)
-    subprocess.run(["git", "commit", "-m", "Auto-update trendtracker_output.json"], check=True)
-    print("✅ JSON file committed locally.")
-except subprocess.CalledProcessError as e:
-    print("⚠️ Git commit failed:", e)
+    subprocess.run(["git", "config", "--global", "user.name", "RenderBot"])
+    subprocess.run(["git", "config", "--global", "user.email", "render@bot.com"])
+    
+    # Force SSH for the remote URL (important!)
+    subprocess.run(["git", "remote", "set-url", "origin", "git@github.com:ZitaCodes/trendtracker-backend.git"])
+
+    # Stage + commit JSON update
+    subprocess.run(["git", "add", "trendtracker_output.json"])
+    subprocess.run(["git", "commit", "-m", "✅ Auto-update trendtracker output via Render"])
+    print("✅ Committed trendtracker_output.json locally")
+
+    # Push to GitHub — this is the step we need to verify!
+    push_result = subprocess.run(["git", "push", "origin", "main"], capture_output=True, text=True)
+
+    if push_result.returncode == 0:
+        print("🚀 Git push succeeded.")
+    else:
+        print("❌ Git push failed.")
+        print("STDOUT:", push_result.stdout)
+        print("STDERR:", push_result.stderr)
+
+except Exception as e:
+    print("💥 Exception during Git operations:", e)
