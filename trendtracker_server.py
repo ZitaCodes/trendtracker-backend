@@ -77,7 +77,7 @@ try:
         ])
 
     # Add, commit, push
-    subprocess.run(["git", "add", "yourfile.json"])  # 👈 update for personas, reddit, etc.
+    subprocess.run(["git", "add", "trendtracker_output.json"])  # 👈 update for personas, reddit, etc.
     subprocess.run(["git", "commit", "-m", "Auto-update via Render"])
     subprocess.run(["git", "push", "origin", "main"])
 
