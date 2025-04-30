@@ -1,5 +1,5 @@
 from flask import Flask, jsonify
-from flask_cors import CORS  # ✅ Add this line
+from flask_cors import CORS  # ✅ Adding this line
 
 import json
 import subprocess
