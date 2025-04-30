@@ -61,8 +61,8 @@ def get_tropes():
     })                            
 
 @app.route('/trendtracker_output.json')
-        def serve_raw_json_file():
-        return send_from_directory(directory=os.getcwd(), path='trendtracker_output.json')
+def serve_raw_json_file():
+    return send_from_directory(directory=os.getcwd(), path='trendtracker_output.json')
 
 # Optional: Only run push logic if inside Render
 if os.getenv("RENDER"):
