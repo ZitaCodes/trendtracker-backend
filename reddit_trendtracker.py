@@ -9,8 +9,8 @@ import json
 
 # Direct credentials — skip .env
 reddit = praw.Reddit(
-    client_id="mlq9yaxlmw3pdZO7OB3YQg",
-    client_secret="FyzJIljKl43hMBWDZ0OEdFPLW7074Q",
+    client_id="2G5r4uUl4r_D_AezICfEUg",
+    client_secret="GoHNq_IOzimnp34GKCBk-iZrBpvSVA",
     user_agent="TrendTrackerBot/0.1"
 )
 
