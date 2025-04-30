@@ -1,11 +1,13 @@
 import praw
-from datetime import datetime, timedelta
+from datetime import datetime
 from collections import Counter
 import re
 import os
 import subprocess
 from dotenv import load_dotenv
 import json
+import pytz
+local_time = datetime.now(pytz.timezone("US/Eastern")).isoformat()
 
 # Direct credentials — skip .env
 reddit = praw.Reddit(
@@ -63,7 +65,7 @@ for sub in subreddits:
 
 # Output as JSON
 trend_data = {
-    "timestamp": datetime.utcnow().isoformat(),
+    "timestamp": local_time,
     "source": "Reddit",
     "tropes": [{"name": k, "count": v} for k, v in results.most_common()]
 }
