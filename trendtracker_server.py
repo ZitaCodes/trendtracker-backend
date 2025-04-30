@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
 from flask_cors import CORS  # ✅ Adding this line
+from flask import send_from_directory  # Add at top if not already
 
 import json
 import subprocess
@@ -58,7 +59,10 @@ def get_tropes():
         "tropes": data["tropes"],
         "insight": insight
     })                            
-    
+
+@app.route('/trendtracker_output.json')
+        def serve_raw_json_file():
+        return send_from_directory(directory=os.getcwd(), path='trendtracker_output.json')
 
 # Optional: Only run push logic if inside Render
 if os.getenv("RENDER"):
