@@ -1,15 +1,13 @@
 from flask import Flask, jsonify
-from flask_cors import CORS  # ✅ Adding this line
-from flask import send_from_directory  # Add at top if not already
+from flask_cors import CORS
+from flask import send_from_directory
 
 import json
 import subprocess
 import os
 
-
 app = Flask(__name__)
 CORS(app, origins=["https://bookmkttool.vercel.app"])
-
 
 # Subreddit member counts
 subreddit_info = {
@@ -41,7 +39,7 @@ def get_tropes():
     # ✅ File exists — read it normally
     file_path = os.path.join(os.path.dirname(__file__), 'trendtracker_output.json')
     with open(file_path, 'r') as f:
-
+        data = json.load(f)
 
     top_trope = data['tropes'][0] if data['tropes'] else {}
     insight = {}
@@ -59,7 +57,7 @@ def get_tropes():
         "timestamp": data["timestamp"],
         "tropes": data["tropes"],
         "insight": insight
-    })                            
+    })
 
 @app.route('/trendtracker_output.json')
 def serve_raw_json_file():
@@ -82,7 +80,6 @@ if os.getenv("RENDER"):
     
     except Exception as e:
         print("❌ Git push failed:", e)
-
 
 if __name__ == '__main__':
     app.run(debug=True)
