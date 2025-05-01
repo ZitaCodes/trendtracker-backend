@@ -1,12 +1,13 @@
 import praw
-from datetime import datetime
 from collections import Counter
 import re
 import os
 import subprocess
 from dotenv import load_dotenv
 import json
+from datetime import datetime
 import pytz
+
 local_time = datetime.now(pytz.timezone("US/Eastern")).isoformat()
 
 # Direct credentials — skip .env
@@ -69,6 +70,8 @@ trend_data = {
     "source": "Reddit",
     "tropes": [{"name": k, "count": v} for k, v in results.most_common()]
 }
+
+print("🕒 TrendTracker Local Time:", local_time)
 
 # Save file
 with open("trendtracker_output.json", "w") as f:
