@@ -75,9 +75,9 @@ print("🕒 TrendTracker Local Time:", local_time, flush=True)
 
 
 # Save file
-with open("trendtracker_output.json", "w") as f:
-    json.dump(trend_data, f, indent=2)
-
+output_path = os.path.join(os.path.dirname(__file__), "trendtracker_output.json")
+with open(output_path, "w") as f:
+    
 print("✅ TrendTracker data written to trendtracker_output.json")
 
 # Local Git commit (optional - no push)
