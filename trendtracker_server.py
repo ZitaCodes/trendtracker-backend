@@ -39,8 +39,9 @@ def get_tropes():
         })
 
     # ✅ File exists — read it normally
-    with open('trendtracker_output.json', 'r') as f:
-        data = json.load(f)
+    file_path = os.path.join(os.path.dirname(__file__), 'trendtracker_output.json')
+    with open(file_path, 'r') as f:
+
 
     top_trope = data['tropes'][0] if data['tropes'] else {}
     insight = {}
