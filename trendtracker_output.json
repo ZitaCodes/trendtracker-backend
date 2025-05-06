@@ -1,66 +1,41 @@
 {
-  "timestamp": "2025-04-12T05:00:00Z",
-  "source": "Reddit",
+  "timestamp": "2025-05-06 22:24:07",
   "tropes": [
     {
-      "name": "enemies to lovers",
-      "count": 66
-    },
-    {
-      "name": "forced proximity",
-      "count": 55
-    },
-    {
-      "name": "dark romance",
-      "count": 13
-    },
-    {
-      "name": "slow burn",
-      "count": 11
-    },
-    {
-      "name": "friends to lovers",
-      "count": 9
-    },
-    {
-      "name": "age gap",
-      "count": 9
-    },
-    {
-      "name": "found family",
-      "count": 8
-    },
-    {
-      "name": "possessive hero",
-      "count": 3
-    },
-    {
-      "name": "second chance",
-      "count": 3
-    },
-    {
-      "name": "fake relationship",
-      "count": 3
-    },
-    {
       "name": "fated mates",
-      "count": 3
-    },
-    {
-      "name": "alpha male",
-      "count": 2
+      "count": 83
     },
     {
       "name": "touch her and die",
-      "count": 2
+      "count": 72
+    },
+    {
+      "name": "grumpy/sunshine",
+      "count": 65
+    },
+    {
+      "name": "enemies to lovers",
+      "count": 61
+    },
+    {
+      "name": "forced proximity",
+      "count": 58
+    },
+    {
+      "name": "hidden identity",
+      "count": 55
+    },
+    {
+      "name": "dark secret",
+      "count": 52
+    },
+    {
+      "name": "revenge romance",
+      "count": 48
     },
     {
       "name": "forbidden love",
-      "count": 1
-    },
-    {
-      "name": "arranged marriage",
-      "count": 1
+      "count": 44
     }
   ]
 }
