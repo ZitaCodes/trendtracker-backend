@@ -5,7 +5,7 @@ import os
 import subprocess
 from dotenv import load_dotenv
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 import pytz
 
 local_time = datetime.now(pytz.timezone("US/Eastern")).isoformat()
@@ -16,7 +16,6 @@ reddit = praw.Reddit(
     client_secret="GoHNq_IOzimnp34GKCBk-iZrBpvSVA",
     user_agent="TrendTrackerBot/0.1"
 )
-
 
 # Config
 subreddits = [
@@ -73,13 +72,19 @@ trend_data = {
 
 print("🕒 TrendTracker Local Time:", local_time, flush=True)
 
-
 # Save file
 output_path = os.path.join(os.path.dirname(__file__), "trendtracker_output.json")
 with open(output_path, "w") as f:
     json.dump(trend_data, f, indent=2)
-    
+
 print("✅ TrendTracker data written to trendtracker_output.json")
+
+# 🔥 NEW: Log output of top tropes
+print("\n==============================")
+print("🔁 Reddit Tropes Summary — Last 90 Days")
+for trope in trend_data["tropes"]:
+    print(f"{trope['name']} — {trope['count']}")
+print("==============================\n")
 
 # Local Git commit (optional - no push)
 print("🔁 Starting auto-commit and push to GitHub...")
