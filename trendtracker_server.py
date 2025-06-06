@@ -53,12 +53,12 @@ def get_tropes():
             "blurb": f'"{top_trope["name"].title()}" is trending across {subs_discussing} online reader groups with over {member_sum:,} book lovers. Try using this in your promo copy or book page metadata for stronger clickthroughs.'
         }
 
-     print("\n==============================")
-     print("🔁 Reddit Tropes Summary — Last 90 Days")
-     for trope in data["tropes"]:
-         print(f"{trope['name']} — {trope['count']}")
+    # ✅ Print output to Render logs
+    print("\n==============================")
+    print("🔁 Reddit Tropes Summary — Last 90 Days")
+    for trope in data["tropes"]:
+        print(f"{trope['name']} — {trope['count']}")
 
-    
     return jsonify({
         "timestamp": data["timestamp"],
         "tropes": data["tropes"],
