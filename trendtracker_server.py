@@ -9,7 +9,7 @@ import os
 app = Flask(__name__)
 CORS(app, origins=["https://bookmkttool.vercel.app"])
 
-# Subreddit member counts
+# Subreddit member counts of
 subreddit_info = {
     "Suggestmeabook": 3200000,
     "RomanceBooks": 130000,
