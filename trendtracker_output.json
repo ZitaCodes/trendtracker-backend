@@ -1,41 +1,94 @@
 {
-  "timestamp": "2025-06-06 22:45:07",
+  "timestamp": "2025-06-06T22:12:57.396794-04:00",
+  "source": "Reddit",
   "tropes": [
     {
-      "name": "fated mates",
-      "count": 83
+      "name": "action",
+      "count": 47
     },
     {
-      "name": "touch her and die",
-      "count": 72
-    },
-    {
-      "name": "grumpy/sunshine",
-      "count": 65
+      "name": "friends to lovers",
+      "count": 18
     },
     {
       "name": "enemies to lovers",
-      "count": 61
+      "count": 15
+    },
+    {
+      "name": "dragons",
+      "count": 14
+    },
+    {
+      "name": "shifter",
+      "count": 13
+    },
+    {
+      "name": "slow burn",
+      "count": 9
     },
     {
       "name": "forced proximity",
-      "count": 58
+      "count": 8
     },
     {
-      "name": "hidden identity",
-      "count": 55
+      "name": "fae",
+      "count": 8
     },
     {
-      "name": "dark secret",
-      "count": 52
+      "name": "age gap",
+      "count": 7
     },
     {
-      "name": "revenge romance",
-      "count": 48
+      "name": "dark romance",
+      "count": 7
+    },
+    {
+      "name": "werewolves",
+      "count": 7
+    },
+    {
+      "name": "found family",
+      "count": 6
+    },
+    {
+      "name": "alpha male",
+      "count": 5
+    },
+    {
+      "name": "second chance",
+      "count": 5
+    },
+    {
+      "name": "fake relationship",
+      "count": 4
+    },
+    {
+      "name": "billionaire",
+      "count": 4
+    },
+    {
+      "name": "demons",
+      "count": 3
+    },
+    {
+      "name": "fated mates",
+      "count": 3
+    },
+    {
+      "name": "possessive hero",
+      "count": 2
+    },
+    {
+      "name": "grumpy/sunshine",
+      "count": 1
+    },
+    {
+      "name": "secret baby",
+      "count": 1
     },
     {
       "name": "forbidden love",
-      "count": 44
+      "count": 1
     }
   ]
 }
