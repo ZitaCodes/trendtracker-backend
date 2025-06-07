@@ -28,7 +28,9 @@ tropes_list = [
     "grumpy/sunshine", "fated mates", "forced proximity", "enemies to lovers",
     "friends to lovers", "slow burn", "alpha male", "possessive hero",
     "soulmates", "second chance", "touch her and die", "found family",
-    "why choose", "age gap", "forbidden love", "dark romance",
+    "why choose", "age gap", "forbidden love", "dark romance", "shifter", 
+    "werewolves", "dragons", "found family", "unicorns", "fae", 
+    "hidden treasure", "ancient secrets", "high action", "action", "secret identity", "demons",
     "billionaire", "arranged marriage", "fake relationship", "secret baby"
 ]
 
