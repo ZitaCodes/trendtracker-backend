@@ -41,7 +41,7 @@ results = Counter()
 def clean_text(text):
     return re.sub(r'[^\w\s/]', '', text.lower())
 
-# Pull from last 90 days
+# Pull from last rolling 90 days
 cutoff = datetime.utcnow() - timedelta(days=90)
 
 # Scrape subreddit posts
