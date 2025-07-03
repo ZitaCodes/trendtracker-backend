@@ -1,93 +1,93 @@
 {
-  "timestamp": "2025-06-06T22:12:57.396794-04:00",
+  "timestamp": "2025-07-01T00:30:00-04:00",
   "source": "Reddit",
   "tropes": [
     {
       "name": "action",
-      "count": 47
+      "count": 48
     },
     {
-      "name": "friends to lovers",
+      "name": "dragons",
+      "count": 21
+    },
+    {
+      "name": "age gap",
+      "count": 20
+    },
+    {
+      "name": "forced proximity",
       "count": 18
     },
     {
       "name": "enemies to lovers",
-      "count": 15
+      "count": 16
     },
     {
-      "name": "dragons",
+      "name": "friends to lovers",
       "count": 14
     },
     {
-      "name": "shifter",
-      "count": 13
-    },
-    {
-      "name": "slow burn",
-      "count": 9
-    },
-    {
-      "name": "forced proximity",
-      "count": 8
-    },
-    {
       "name": "fae",
-      "count": 8
-    },
-    {
-      "name": "age gap",
-      "count": 7
-    },
-    {
-      "name": "dark romance",
-      "count": 7
-    },
-    {
-      "name": "werewolves",
-      "count": 7
-    },
-    {
-      "name": "found family",
-      "count": 6
-    },
-    {
-      "name": "alpha male",
-      "count": 5
-    },
-    {
-      "name": "second chance",
-      "count": 5
-    },
-    {
-      "name": "fake relationship",
-      "count": 4
-    },
-    {
-      "name": "billionaire",
-      "count": 4
+      "count": 14
     },
     {
       "name": "demons",
-      "count": 3
+      "count": 12
+    },
+    {
+      "name": "dark romance",
+      "count": 9
+    },
+    {
+      "name": "alpha male",
+      "count": 9
+    },
+    {
+      "name": "shifter",
+      "count": 8
+    },
+    {
+      "name": "billionaire",
+      "count": 7
+    },
+    {
+      "name": "slow burn",
+      "count": 6
+    },
+    {
+      "name": "werewolves",
+      "count": 6
+    },
+    {
+      "name": "forbidden love",
+      "count": 5
     },
     {
       "name": "fated mates",
+      "count": 4
+    },
+    {
+      "name": "found family",
       "count": 3
+    },
+    {
+      "name": "second chance",
+      "count": 2
     },
     {
       "name": "possessive hero",
       "count": 2
     },
     {
-      "name": "grumpy/sunshine",
+      "name": "why choose",
+      "count": 2
+    },
+    {
+      "name": "arranged marriage",
       "count": 1
     },
     {
-      "name": "secret baby",
-      "count": 1
-    },
-    {
-      "name": "forbidden love",
+      "name": "high action",
       "count": 1
     }
   ]
