@@ -114,3 +114,15 @@ try:
 
 except Exception as e:
     print("💥 Git error:", e)
+
+
+try:
+    subprocess.run(["git", "config", "--global", "user.email", "you@example.com"])
+    subprocess.run(["git", "config", "--global", "user.name", "PromoStudio Bot"])
+
+    subprocess.run(["git", "add", "trendtracker_output.json"], check=True)
+    subprocess.run(["git", "commit", "-m", f"Update Reddit trend data"], check=True)
+    subprocess.run(["git", "push", "origin", "main"], check=True)
+    print("✅ Git push successful.")
+except subprocess.CalledProcessError as e:
+    print(f"❌ Git push failed: {e}")
