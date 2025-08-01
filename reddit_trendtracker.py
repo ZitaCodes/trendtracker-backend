@@ -65,31 +65,34 @@ for sub in subreddits:
             if trope in body:
                 results[tropes_lookup[trope]] += 1
 
-# Output as JSON
-trend_data = {
-    "timestamp": local_time,
-    "source": "Reddit",
-    "tropes": [{"name": k, "count": v} for k, v in results.most_common()]
-}
+# ⬇ Output as JSON and Print for Render Logs
+if __name__ == "__main__":
+    # ✅ Build the trend data structure
+    trend_data = {
+        "timestamp": local_time,
+        "source": "Reddit",
+        "tropes": [{"name": k, "count": v} for k, v in results.most_common()]
+    }
 
-print("🕒 TrendTracker Local Time:", local_time, flush=True)
+    print("🕓 TrendTracker Local Time:", local_time, flush=True)
 
-# Save file
-output_path = os.path.join(os.path.dirname(__file__), "trendtracker_output.json")
-with open(output_path, "w") as f:
-    json.dump(trend_data, f, indent=2)
+    # 💾 Save to JSON file
+    output_path = os.path.join(os.path.dirname(__file__), "trendtracker_output.json")
+    with open(output_path, "w") as f:
+        json.dump(trend_data, f, indent=2)
 
-print("✅ TrendTracker data written to trendtracker_output.json")
+    print("✅ TrendTracker data written to trendtracker_output.json")
 
-# 👇 Add this to show full JSON in Render logs
-print(json.dumps(trend_data, indent=2))
+    # 👀 Show full JSON output in Render logs
+    print(json.dumps(trend_data, indent=2))
 
-# 🔥 NEW: Log output of top tropes
-print("\n==============================")
-print("🔁 Reddit Tropes Summary — Last 90 Days")
-for trope in trend_data["tropes"]:
-    print(f"{trope['name']} — {trope['count']}")
-print("==============================\n")
+    # 🔥 Show top tropes nicely in logs
+    print("\n==============================")
+    print("📊 Reddit Tropes Summary — Last 90 Days")
+    for trope in trend_data["tropes"]:
+        print(f"{trope['name']} – {trope['count']}")
+    print("==============================\n")
+
 
 # Local Git commit (optional - no push)
 print("🔁 Starting auto-commit and push to GitHub...")
