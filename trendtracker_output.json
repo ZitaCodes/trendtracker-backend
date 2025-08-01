@@ -1,93 +1,89 @@
 {
-  "timestamp": "2025-07-01T00:30:00-04:00",
+  "timestamp": "2025-08-01T15:41:17.765624-04:00",
   "source": "Reddit",
   "tropes": [
     {
       "name": "action",
-      "count": 48
-    },
-    {
-      "name": "dragons",
-      "count": 21
-    },
-    {
-      "name": "age gap",
-      "count": 20
-    },
-    {
-      "name": "forced proximity",
-      "count": 18
+      "count": 56
     },
     {
       "name": "enemies to lovers",
-      "count": 16
-    },
-    {
-      "name": "friends to lovers",
-      "count": 14
+      "count": 24
     },
     {
       "name": "fae",
-      "count": 14
+      "count": 21
     },
     {
-      "name": "demons",
-      "count": 12
+      "name": "slow burn",
+      "count": 17
+    },
+    {
+      "name": "friends to lovers",
+      "count": 16
+    },
+    {
+      "name": "found family",
+      "count": 11
     },
     {
       "name": "dark romance",
+      "count": 10
+    },
+    {
+      "name": "demons",
       "count": 9
     },
     {
-      "name": "alpha male",
+      "name": "forced proximity",
       "count": 9
+    },
+    {
+      "name": "fated mates",
+      "count": 8
     },
     {
       "name": "shifter",
       "count": 8
     },
     {
-      "name": "billionaire",
-      "count": 7
-    },
-    {
-      "name": "slow burn",
-      "count": 6
-    },
-    {
       "name": "werewolves",
-      "count": 6
+      "count": 8
     },
     {
       "name": "forbidden love",
-      "count": 5
+      "count": 7
     },
     {
-      "name": "fated mates",
-      "count": 4
+      "name": "alpha male",
+      "count": 7
     },
     {
-      "name": "found family",
-      "count": 3
+      "name": "dragons",
+      "count": 6
     },
     {
       "name": "second chance",
-      "count": 2
+      "count": 6
+    },
+    {
+      "name": "age gap",
+      "count": 6
     },
     {
       "name": "possessive hero",
-      "count": 2
+      "count": 3
     },
     {
-      "name": "why choose",
-      "count": 2
+      "name": "soulmates",
+      "count": 1
     },
     {
       "name": "arranged marriage",
       "count": 1
     },
     {
-      "name": "high action",
+      "name": "unicorns",
       "count": 1
     }
   ]
