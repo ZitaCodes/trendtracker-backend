@@ -81,6 +81,9 @@ with open(output_path, "w") as f:
 
 print("✅ TrendTracker data written to trendtracker_output.json")
 
+# 👇 Add this to show full JSON in Render logs
+print(json.dumps(trend_data, indent=2))
+
 # 🔥 NEW: Log output of top tropes
 print("\n==============================")
 print("🔁 Reddit Tropes Summary — Last 90 Days")
