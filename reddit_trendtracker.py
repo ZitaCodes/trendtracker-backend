@@ -25,13 +25,13 @@ subreddits = [
 
 # List of tropes to track
 tropes_list = [
-    "grumpy/sunshine", "fated mates", "forced proximity", "enemies to lovers",
-    "friends to lovers", "slow burn", "alpha male", "possessive hero",
-    "soulmates", "second chance", "touch her and die", "found family",
-    "why choose", "age gap", "forbidden love", "dark romance", "shifter", 
+    "grumpy/sunshine", "fated mates", "forced proximity", "enemies to lovers", "vegan", "weight loss",
+    "friends to lovers", "slow burn", "alpha male", "possessive hero", "AI", "artificial intelligence",
+    "soulmates", "second chance", "touch her and die", "found family", "cooking", "diet",
+    "why choose", "age gap", "forbidden love", "dark romance", "shifter", "faith", 
     "werewolves", "dragons", "found family", "unicorns", "fae", "sentient object romance",
     "hidden treasure", "ancient secrets", "high action", "action", "secret identity", "demons",
-    "billionaire", "arranged marriage", "fake relationship", "secret baby"
+    "billionaire", "arranged marriage", "fake relationship", "self-help", "motivational", "motivation", "secret baby"
 ]
 
 # Normalize variations
