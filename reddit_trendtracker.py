@@ -29,7 +29,7 @@ tropes_list = [
     "friends to lovers", "slow burn", "alpha male", "possessive hero",
     "soulmates", "second chance", "touch her and die", "found family",
     "why choose", "age gap", "forbidden love", "dark romance", "shifter", 
-    "werewolves", "dragons", "found family", "unicorns", "fae", 
+    "werewolves", "dragons", "found family", "unicorns", "fae", "sentient object romance",
     "hidden treasure", "ancient secrets", "high action", "action", "secret identity", "demons",
     "billionaire", "arranged marriage", "fake relationship", "secret baby"
 ]
