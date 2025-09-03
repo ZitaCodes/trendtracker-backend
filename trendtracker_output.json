@@ -1,89 +1,89 @@
 {
-  "timestamp": "2025-08-01T15:41:17.765624-04:00",
+  "timestamp": "2025-09-01T17:39:17.866540-04:00",
   "source": "Reddit",
   "tropes": [
     {
       "name": "action",
-      "count": 56
+      "count": 47
     },
     {
       "name": "enemies to lovers",
-      "count": 24
-    },
-    {
-      "name": "fae",
-      "count": 21
-    },
-    {
-      "name": "slow burn",
-      "count": 17
+      "count": 29
     },
     {
       "name": "friends to lovers",
-      "count": 16
+      "count": 14
     },
     {
-      "name": "found family",
-      "count": 11
+      "name": "slow burn",
+      "count": 12
     },
     {
-      "name": "dark romance",
-      "count": 10
+      "name": "werewolves",
+      "count": 12
     },
     {
       "name": "demons",
-      "count": 9
+      "count": 11
     },
     {
       "name": "forced proximity",
+      "count": 10
+    },
+    {
+      "name": "found family",
       "count": 9
     },
     {
-      "name": "fated mates",
-      "count": 8
+      "name": "age gap",
+      "count": 9
+    },
+    {
+      "name": "fae",
+      "count": 9
     },
     {
       "name": "shifter",
       "count": 8
     },
     {
-      "name": "werewolves",
+      "name": "dark romance",
       "count": 8
-    },
-    {
-      "name": "forbidden love",
-      "count": 7
     },
     {
       "name": "alpha male",
       "count": 7
     },
     {
-      "name": "dragons",
-      "count": 6
+      "name": "forbidden love",
+      "count": 5
     },
     {
-      "name": "second chance",
-      "count": 6
-    },
-    {
-      "name": "age gap",
-      "count": 6
+      "name": "fake relationship",
+      "count": 5
     },
     {
       "name": "possessive hero",
       "count": 3
     },
     {
+      "name": "dragons",
+      "count": 3
+    },
+    {
+      "name": "second chance",
+      "count": 2
+    },
+    {
+      "name": "why choose",
+      "count": 2
+    },
+    {
       "name": "soulmates",
       "count": 1
     },
     {
-      "name": "arranged marriage",
-      "count": 1
-    },
-    {
-      "name": "unicorns",
+      "name": "touch her and die",
       "count": 1
     }
   ]
